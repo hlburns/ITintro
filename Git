@@ -42,7 +42,7 @@ git init
 git status
 -If you use emacs i would remove the buffers here!
 git add . #Adds all files to repo
-git commit -m "first commit"
+git commit -a -m "first commit"
 #First create a new repo online and get the url
 git remote add origin https://github.com/username/repo.git
 git push -u origin master # Adds to master branch
