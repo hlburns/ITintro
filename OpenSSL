@@ -1,0 +1,15 @@
+# On many of the NOCs systems the OpenSSL is also too old to use!
+https://www.openssl.org/source/
+# Download the latest one (highlighted in red most likely)
+# Extract and move the folder over to your home	   directory
+# cd into enclosing directory and run the following commands to	build your own
+# OpenSSL - this, by the way, will also allow you to set up a certificate for
+# the ipython notebook server 
+# To build:
+./config --prefix=/noc/users/$USER --openssldir=/noc/users/$USER/openssl
+make && make install
+# This will add the openssl executable to your ~/bin dir so should work
+# straight away
+# check
+which openssl
+# should give you your ~/bin/openssl

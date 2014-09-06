@@ -1,4 +1,4 @@
-Installing Git on the NOCS systems
+#~~Installing Git on the NOCS systems~~#
 
 Noc has git but an old version (this causes problems)
 Please use version 1.8 or later - i use 2.1
@@ -20,7 +20,17 @@ to .bashrc
 source ./.bashrc  to update and check 
 git --version 
 
-Setting up git:
+**Csh install:
+Same as bash (if make && make install don't work try ./make )
+My set up is move this to
+~/bin/gitfolder
+and simply add:
+setenv PATH "/home/user/bin/git/:$PATH"
+to .cshrc
+source ./.cshrc  to update and check
+git --version
+
+#~~Setting up git:~~#
 
 sign up online
 (use your username and password chosen)
@@ -37,12 +47,10 @@ git commit -m "first commit"
 git remote add origin https://github.com/username/repo.git
 git push -u origin master # Adds to master branch
 
-**Csh install:
-Same as bash (if make && make install don't work try ./make )
-My set up is move this to
-~/bin/gitfolder
-and simply add:
-setenv PATH "/home/user/bin/git/:$PATH"
-to .cshrc
-source ./.cshrc  to update and check
-git --version
+# If you get an error here please try 
+git config http.sslVerify "false"
+# and repeat - Some computers are slightly differenct and you just can't 
+# get the openssl to verify stuff
+# Still having trouble - you may need to update open SSL please see the file
+# OpenSSL
+
