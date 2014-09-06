@@ -1,0 +1,94 @@
+# This are really cool and really useful!
+
+#~~What is it?~~#
+# There a load of useful tutorials online
+http://nbviewer.ipython.org/
+# Bascialy write your python script as if it were a notebook through a web 
+# browser. You can type in directly latex and html code to put pictures
+# and equations in. 
+# I will convert itself into a python script or .tex file for you!
+# It's really great to share stuff with people that aren't that familiar with
+# python - simply upload your notebook to the nbview and share it!
+
+# Lauching a local notbook is as simple as:
+ipython notebook 
+# you might want to add 
+c.IPKernelApp.pylab = 'inline' 
+# to ~/.ipython/profile_default/ipython_notebook_config.py
+# this will allow plots to show on the screen
+ http://localhost:8888/
+# I prefer to set up up to run remotely as its much faster!
+
+#~~Setting up~~#
+# If on NOCs system download anaconda (see Anaconda txt file) 
+# http://ipython.org/ipython-doc/rel-1.1.0/interactive/public_server.html
+# The steps above don't quite work on the NOCS systems but probably will 
+# on your own computer.
+# open ipython through the terminal
+ipython
+from IPython.lib import passwd
+passwd()
+# It will ask you for a password - the nocs system has trouble with symbols
+# Just number and letters and it will work fine!
+# It will output a key
+# Copy this key
+# Ctrl+Z  will suspend this process and take you back to the terminal 
+# Create a profile for a computer e.g. theia
+ipython profile create nbtheia
+cd ~/.ipython/profile_theia
+# now edit the ipython_notebook_config.py
+# add or uncomment the following lines:
+c = get_config()
+
+# Kernel config
+c.IPKernelApp.pylab = 'inline'  # if you want plotting support always
+
+# Notebook config
+c.NotebookApp.ip = '139.166.240.35' # Find from ifconfig command (must specify)
+c.NotebookApp.open_browser = False # If true will launch firefox through 
+                                   # X server (slow!)
+c.NotebookApp.password = u'[Paste your key here]'
+# It is a good idea to put it on a known, fixed port
+c.NotebookApp.port = 9999
+
+# If that key is no longer in your clipboard type:
+fg
+# to resume the ipython session and recopy it
+# else just exit the session now.
+# Creat a directory in your home dir for your notebooks e.g.
+mkdir notebooks
+cd notebooks
+# now lets start the server:
+screen -S nbserver
+ipython notebook --profile=nbtheia
+# This will start a screen session and launch the server
+# On your own webbrowser go to 
+http://139.166.240.187:9999/ (The IP adress and port number)
+# type in your password and start a new notebook.
+# Mine are mostly readable to all so take a look for examples in
+# ~hb1g13/Python/notebooks
+# Now detatch the screen so you can close the teminal window
+# Ctrl+A+D - will detatch the screen so you can exit while the process 
+# still runs
+# If you want to reattach the screen 
+screen -r nbserver
+# I'm super lazy so i've set up aliases in my .cshrc 
+# nbtheia etc to start the server and then I've bookmarked the IP addresses.
+
+
+#~~Converting .ipynb to .py or .tex~~#
+# Go to your folder with your notebook files
+# to make a python script simply type
+ipython nbconvert --to python notebook.ipynb
+# to make a latex document
+ipython nbconvert --to latex notebook.ipynb
+# You will need to add ~hb1g13/bin/pandoc to your path 
+# Either copy it over or just add ~hb1g13/bin/ to your path in your
+# .cshrc
+setenv PATH "${PATH}:/noc/users/hb1g13/bin"
+# I store a lot of stuff in there so it is probably best to have your own
+# ~/bin dir and copy over the file and simply add instead
+setenv PATH "${PATH}:/noc/users/$USER/bin"
+# If you get an error email me with the error as there maybe a missing library
+# file you need. H.Burns@noc.soton.ac.uk
+

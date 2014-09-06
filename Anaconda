@@ -1,0 +1,48 @@
+# The default python is old and very basic
+# It's reccomended you use anaconda for more serious computing!
+# This is a really neat package, it comes with most of the modules you'll want
+# And it comes with conda and pip to install further packages
+# This is really usefull as we have no root passwords!
+
+#~~installing:~~#
+# Go to http://continuum.io/downloads
+# download the Linux 64-bit version and move the file to your unix space
+# Anaconda 2.0 + works best on the new system as they changed the default 
+# Backends to work better with what ever nocs has!
+# Type
+chmod 755 Anaconda-2.0.1-Linux-x86.sh
+bash Anaconda-2.0.1-Linux-x86.sh
+# to install (in csh you may need to type ./Anaconda-2.0.1-Linux-x86.sh)
+# Follow the instructions - this is around 4GB so you may want to store it
+# Outside of your home directory (I leave mine in my home directory)
+# Onces it's install it'll add a line to you .bashrc as it assumes you are 
+# sensible and in bash - most likely you're not so you have to add the 
+# following to your .cshrc:
+setenv PYTHONPATH "/noc/users/$USER/anaconda/bin"
+setenv PATH "/noc/users/$USER/anaconda/bin:${PATH}"
+# You'll have to change the path if you not put it in your home dir!
+# Check 
+which ipython
+# It should now point to your anaconda GREAT!
+
+#~~Installing packages ~~#
+# Keeping up-to-date:
+conda update conda
+conda update anaconda
+# You'll most likely need to intstall the netcdf4 package:
+conda install netcdf4
+# Personally I use the scipy.io netcdf module so leave out the large netcdf4
+# module
+
+
+#Finally if you want a nice GUI interface:
+# Ananconder comes with 
+spyder
+# And you can set up the Ipython notebook (see separe txt file!)
+# Which also tells you how to link kernals so you can type comands in 
+# the QTconsol on your computer and run it on a NOCS machine.
+# I just use the notebook but info for linking kernels is here.
+# It takes a bit of fiddling so give yourself a day before you go away
+# to figure it out if your using this to speed up working from home 
+# with a dodgy internet connection.
+http://ipython.org/ipython-doc/rel-1.1.0/interactive/qtconsole.html

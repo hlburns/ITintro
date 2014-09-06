@@ -1,0 +1,48 @@
+Installing Git on the NOCS systems
+
+Noc has git but an old version (this causes problems)
+Please use version 1.8 or later - i use 2.1
+
+NB these commands were done is bash shell 
+   please see bash file of swaping shells
+   or see csh version below.
+
+Download the source code from github Git.2.10 etc
+Extract it and move it over to your home directory
+Simply cd into Git.2.10 directory and run:
+make && make install 
+This creates your git commands right here!
+My set up is move this to
+~/bin/gitfolder
+and simply add:
+export PATH=/home/user/bin/git/:$PATH 
+to .bashrc
+source ./.bashrc  to update and check 
+git --version 
+
+Setting up git:
+
+sign up online
+(use your username and password chosen)
+git config --global user.name "your-name"
+git config --global user.email "your-email"
+
+cd to directory and type
+git init
+git status
+-If you use emacs i would remove the buffers here!
+git add . #Adds all files to repo
+git commit -m "first commit"
+#First create a new repo online and get the url
+git remote add origin https://github.com/username/repo.git
+git push -u origin master # Adds to master branch
+
+**Csh install:
+Same as bash (if make && make install don't work try ./make )
+My set up is move this to
+~/bin/gitfolder
+and simply add:
+setenv PATH "/home/user/bin/git/:$PATH"
+to .cshrc
+source ./.cshrc  to update and check
+git --version
