@@ -35,7 +35,7 @@ passwd()
 # Ctrl+Z  will suspend this process and take you back to the terminal 
 # Create a profile for a computer e.g. theia
 ipython profile create nbtheia
-cd ~/.ipython/profile_theia
+cd ~/.ipython/profile_nbtheia
 # now edit the ipython_notebook_config.py
 # add or uncomment the following lines:
 c = get_config()
@@ -74,7 +74,7 @@ http://139.166.240.187:9999/ (The IP adress and port number)
 screen -r nbserver
 # I'm super lazy so i've set up aliases in my .cshrc 
 # nbtheia etc to start the server and then I've bookmarked the IP addresses.
-
+# NB!!!! From outside the uni network you must VPN!
 
 #~~Converting .ipynb to .py or .tex~~#
 # Go to your folder with your notebook files
