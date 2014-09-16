@@ -1,17 +1,9 @@
 #~~Git on the NOCS systems~~#
 
+##~~Instalation~~##
+
 Noc has git but an old version (this can cause problems)
 Please use version 1.8 or later - i use 2.1
-
-You have 2 choices, use the command
-
-setup v1.9.2 git_scm
-
-Add this to your .login, this is a bit old and 
-maybe be missing some features.
-
-2) Install an up to date verison 
-(Takes Space in your home directory)
 
 NB these commands were done is bash shell 
    please see bash file of swaping shells
@@ -20,6 +12,11 @@ NB these commands were done is bash shell
 NB If you get a weird error first port of call
    would be to try a different machine, themis
    and tethys work fine
+
+NB The system has a git-scm under the setup command
+   I can't find a away to get this run smoothly with
+   out ssh keys etc. If anyone finds a way please put
+   it here!
 
 Download the source code from github Git.2.10 etc
 Extract it and move it over to your home directory
