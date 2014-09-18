@@ -44,7 +44,8 @@ c = get_config()
 c.IPKernelApp.pylab = 'inline'  # if you want plotting support always
 
 # Notebook config
-c.NotebookApp.ip = '139.166.240.35' # Find from ifconfig command (must specify)
+c.NotebookApp.ip = '139.166.240.35' or 'theia.noc.soton.ac.uk 
+# Find from ifconfig command of hostname.noc.soton.ac.uk (must specify)
 c.NotebookApp.open_browser = False # If true will launch firefox through 
                                    # X server (slow!)
 c.NotebookApp.password = u'[Paste your key here]'
@@ -64,6 +65,8 @@ ipython notebook --profile=nbtheia
 # This will start a screen session and launch the server
 # On your own webbrowser go to 
 http://139.166.240.187:9999/ (The IP adress and port number)
+of 
+theia.noc.soton.ac.uk:9999
 # type in your password and start a new notebook.
 # Mine are mostly readable to all so take a look for examples in
 # ~hb1g13/Python/notebooks
