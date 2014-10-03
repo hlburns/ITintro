@@ -66,3 +66,7 @@ git config http.sslVerify "false"
 # OpenSSL
 # Note there is libcurl library problem on theia, please use another machine
 # This has been tested on themis
+
+# It's been pointed out that when you git diff (to see what has changed)
+# You may encounter a crazy message. To fix this:
+git config --global core.pager 'less -R'
