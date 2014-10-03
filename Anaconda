@@ -24,6 +24,9 @@ setenv PATH "/noc/users/$USER/anaconda/bin:${PATH}"
 # Check 
 which ipython
 # It should now point to your anaconda GREAT!
+# Ananaconda is pretty big so you might want to clear some space:
+conda clean -t # Will remove tarballs
+conda clean -p # Will remove packages
 
 #~~Installing packages ~~#
 # Keeping up-to-date:
