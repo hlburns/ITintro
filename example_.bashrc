@@ -75,16 +75,23 @@ alias tethys='ssh -Y tethys'
 alias themis='ssh -Y themis'
 alias theia='ssh -Y theia'
 #  
-#~~~~~~~~~~~~~~~~ Setup my Linux Environment ~~~~~~~~~~~~~~~~~~~~~~~                                                                                                                                        
-#=================================================================                                                                                                                                          
+#~~~~~~~~~~~~~~~~ Setup my Linux Environment ~~~~~~~~~~~~~~~~~~~~~~~                                
+                                                                                                 
+#=================================================================                                  
+                                                                                                   
+   
 if [ "$(hostname)" != "charon" ]; then
-#If you're not on the gateway machine start setting stuff up:
-#Here is where you would deffine stuff for all                                                                                                                                           
+# If you're not on the gateway machine start setting stuff up:
+# Here is where you would deffine stuff for all 
+# You may wish to edit your path it's slightly different from csh!
+export PATH="/noc/users/$USER/bin:$PATH"                                                  
        if [ "$(uname -a | grep -e "x86_64 x86_64 x86_64" | wc -l)" -gt "0" ]; then
-#     Linux x86_64 systems                                                                                                                                                                                  
-#     Sometimes different machines require different stuff this would be an example
-#     to set stuff up on themis, tethys, theia, mnemosyne etc. It looks for what kind
-#     of machine in the if loop - In the future NOCs systems may have machines
+#     Linux x86_64 systems                                                                        
+                                                                                                     
+#     Sometimes different machines require different stuff 
+#     this would be an example to set stuff up on themis, tethys,
+#     theia, mnemosyne etc. It looks for what kind of machine in 
+#     the if loop - In the future NOCs systems may have machines
 #     with centos (red hat) that will require an addtional if loop 
         fi
 fi                       
