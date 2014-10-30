@@ -20,7 +20,8 @@ c.IPKernelApp.pylab = 'inline'
 # I prefer to set up up to run remotely as its much faster!
 
 #~~Setting up~~#
-# If on NOCs system download anaconda (see Anaconda txt file) 
+# Please use the anaconda setup using setup command or if on your own 
+# machine read the Anaconda file in this repository 
 # http://ipython.org/ipython-doc/rel-1.1.0/interactive/public_server.html
 # The steps above don't quite work on the NOCS systems but probably will 
 # on your own computer.

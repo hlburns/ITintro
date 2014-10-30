@@ -1,4 +1,8 @@
-# The default python is old and very basic
+# NOTE ANACONDA NOW AVAILABLE ON THE SYSTEM THROUGH SETUP!!
+# NO NEED TO INSTALL !
+# I've left this in this repository as the information my be useful 
+# If you wish to install anaconda on your own machine
+
 # It's reccomended you use anaconda for more serious computing!
 # This is a really neat package, it comes with most of the modules you'll want
 # And it comes with conda and pip to install further packages

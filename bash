@@ -6,7 +6,11 @@ simply type bash
 #and now you're in bash, but it's not read in your .bashrc!
 source ./.bashrc # will read it!
 #An example .bashrc can be found ~hb1g13/.bashrc (Set to be readable by all)
-# NB nocs bash is currently ancient so scripts might not work still!
+# NB nocs bash version:
+bash --version
+# bash has changed over the years so the scripts you write on your bash 4.x
+# on your own machine may not work on the bash 2.x or bash 3.x . Noteably 
+# mathematic capability has changed between versions.
 
 #So if you want this to be your default set up then simply add to your .login
 #before the exit statement:
