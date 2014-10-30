@@ -35,14 +35,15 @@ if ( $?NERCARCH ) then
      setup v4.3.1 gcc
      setup v4.0.8 nco
      setup v2.1.2 ncview
-     setup v2.7.3 python  
+     v2014.10.29 anaconda  
   endif
 endif
 
 # type setup to find list of programmes
 # to use nco you need gcc for some missing libraries
 # Speak to Jeff for better builds of the nco stuff though
-# See Anaconda file for more python info
+# Anaconda is currently under testing (Nov2014) but will become 
+# the default python package and is recommended for python users!
 # You have the oppotunity to kick that matlab habit now (swap to python! ) 
 setenv ERESIZE 'no'
 setenv NEINIT 'key ] = csle'
