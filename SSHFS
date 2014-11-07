@@ -3,7 +3,8 @@
 
 # Unbuntu: sudo apt-get install sshfs
 # Mac: google and install homebrew (you made need the gcc compiler and developer tools)
-#      in a terminal simple brew install sshfs
+#      in a terminal simply type:
+brew install sshfs
 #      Homebrew is cool it works similar to linux apt-get, yum comands etc so you can install 
 #      things like emacs and inkscape too.
 # Windows: I believe this is still possible, but running a Virtual Machine (IT will support this!)
@@ -27,3 +28,9 @@ mkdir NOC
 mountnoc
 # Removing the mountpoint won't try and delete the filesystem itself 
 # NB removing files within the mountpoint does delete the files!
+
+# NB:
+#If you use this command outside of NOCS you'll need to be on vpn:
+sshfs -o username@tethys.noc.soton.ac.uk:/ NOC
+#if you don't want to use VPN just change to
+sshfs -o username@charon.noc.soton.ac.uk:/ NOC
