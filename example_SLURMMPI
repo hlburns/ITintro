@@ -10,7 +10,7 @@
 #set Job name
 #SBATCH -J Silly_Job_Name
 #output job files
-#SBATCH -o /hpcdata/$USER/scratch/hb1g13/JOB.%J.out
+#SBATCH -o JOB.%J.out
 #mail me when finished
 #SBATCH --mail-type=END
 #SBATCH --mail-user=$USER@soton.ac.uk
