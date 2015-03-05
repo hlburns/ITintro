@@ -1,0 +1,61 @@
+#!/bin/bash
+#!
+#PBS -S /bin/bash
+#PBS -N Sponge
+#PBS -j oe
+#PBS -l walltime=6:00:00
+#PBS -l nodes=8:ppn=16,pmem=2gb
+#PBS -r n
+#PBS -q batch
+#PBS -m e
+#PBS -M h.burns@noc.soton.ac.uk
+###############################################################
+###                      Bash job script                   ####
+###############################################################
+
+#! Change the working directory (default is home directory)
+#! PBS_O_WORKDIR = directory from which the batch job is launched
+
+cd $PBS_O_WORKDIR
+echo Directory is `pwd`
+# load openmpi module so that we find the mpirun command
+module load openmpi/1.6.4/intel_of2
+#module load intel/2013.4
+module list
+echo "PATH"
+echo $PATH
+echo "LD_LIBRARY_PATH"
+echo $LD_LIBRARY_PATH
+
+echo Time is `date`
+echo PBS job ID is $PBS_JOBID
+echo This jobs runs on the following machines:
+echo `cat $PBS_NODEFILE | uniq`
+
+echo "MITgcm job starting"
+date
+echo "-----------------------------"
+#limit coredumpsize 0
+ulimit -s 819200
+#numnodes= `wc $PBS_NODEFILE | awk '{ print $1 }'`
+
+#! Create a machine file for MPI
+#cat $PBS_NODEFILE | head -$numnodes > host.file.$PBS_JOBID
+
+##echo export LD_LIBRARY_PATH=$/home/jrb1/packages/netcdf3/netcdf-3.6.3/x86_64/intel11.1/lib/:/home/local/software/intel/2013.4.183/lib/:${LD_LIBRARY_PATH}
+
+##export LD_LIBRARY_PATH= $/home/jrb1/packages/netcdf3/netcdf-3.6.3/x86_64/intel11.1/lib/:/home/local/software/intel/2013.4.183/lib/:${LD_LIBRARY_PATH}
+
+#export LD_LIBRARY_PATH=/home/jrb1/packages/netcdf3/netcdf-3.6.3/x86_64/intel11.1/lib/:${LD_LIBRARY_PATH}
+
+##! Run the parallel MPI executable (nodes*ppn)
+
+echo "Running mpirun ./mitgcmuv >& socn.output"
+
+mpirun -mca btl_openib_ib_min_rnr_timer 25 -mca btl_openib_ib_timeout 20 ./mitgcmuv >& socn.output
+
+date
+echo "-----------------------------"
+echo "MITgcm job finished"
+
+exit

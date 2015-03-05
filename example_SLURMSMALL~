@@ -1,0 +1,38 @@
+#!/bin/bash
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=16
+#SBATCH -n 16
+#SBATCH --exclusive
+#SBATCH --time=12:00:00 
+#SBATCH -J Flux
+#SBATCH -o Eddy.%J.out
+#mail me when finished                                            
+#SBATCH --mail-type=END                                           
+#SBATCH --mail-user=h.burns@noc.soton.ac.uk 
+#
+module list
+#
+export SLURM_CPU_BIND="verbose"
+echo "PATH"
+echo $PATH
+echo "LD_LIBRARY_PATH"
+echo $LD_LIBRARY_PATH
+echo "SLURM_NNODES"
+echo $SLURM_NNODES
+echo "SLURM_NODELIST"
+echo $SLURM_NODELIST
+#cd $PBS_O_WORKDIR
+echo Directory is `pwd`
+echo "Running on hosts: $SLURM_NODELIST"
+echo "Running on $SLURM_NNODES nodes."
+echo "Running on $SLURM_NPROCS processors."
+echo Time is `date`
+echo "Python job starting"
+date
+echo "-----------------------------" 
+./CreateVTbar.py 3000daynokpp >& VTpy2.output 
+date
+echo "-----------------------------"
+echo "Python job finished"
+exit
+
