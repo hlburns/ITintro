@@ -1,12 +1,12 @@
 #~~Git on the NOCS systems~~#
 
-##~~Instalation~~##
+##~~Installation~~##
 
 Noc has git but an old version (this can cause problems)
 Please use version 1.8 or later - i use 2.1
 
 NB these commands were done in bash shell 
-   please see bash file of swaping shells
+   please see bash file of swapping shells
    or see csh version below.
 
 NB If you get a weird error first port of call
@@ -61,7 +61,7 @@ git push -u origin master # Adds to master branch
 
 # If you get an error here please try 
 git config http.sslVerify "false"
-# and repeat - Some computers are slightly differenct and you just can't 
+# and repeat - Some computers are slightly different and you just can't 
 # get the openssl to verify stuff
 # Still having trouble - you may need to update open SSL please see the file
 # OpenSSL

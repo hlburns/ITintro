@@ -3,14 +3,14 @@
 #~~What is it?~~#
 # There a load of useful tutorials online
 http://nbviewer.ipython.org/
-# Bascialy write your python script as if it were a notebook through a web 
+# Basically write your python script as if it were a notebook through a web 
 # browser. You can type in directly latex and html code to put pictures
 # and equations in. 
 # I will convert itself into a python script or .tex file for you!
 # It's really great to share stuff with people that aren't that familiar with
-# python - simply upload your notebook to the nbview and share it!
+# python - simply upload your notebook to the nbviewer and share it!
 
-# Lauching a local notbook is as simple as:
+# Launching a local notebook is as simple as:
 ipython notebook 
 # you might want to add 
 c.IPKernelApp.pylab = 'inline' 
@@ -47,7 +47,7 @@ c.IPKernelApp.pylab = 'inline'  # if you want plotting support always
 # Notebook config
 c.NotebookApp.ip = '139.166.240.35' or 'theia.noc.soton.ac.uk 
 # Find from ifconfig command of hostname.noc.soton.ac.uk (must specify)
-c.NotebookApp.open_browser = False # If true will launch firefox through 
+c.NotebookApp.open_browser = False # If true will launch Firefox through 
                                    # X server (slow!)
 c.NotebookApp.password = u'[Paste your key here]'
 # It is a good idea to put it on a known, fixed port
@@ -57,26 +57,26 @@ c.NotebookApp.port = 9999
 fg
 # to resume the ipython session and recopy it
 # else just exit the session now.
-# Creat a directory in your home dir for your notebooks e.g.
+# Create a directory in your home dir for your notebooks e.g.
 mkdir notebooks
 cd notebooks
 # now lets start the server:
 screen -S nbserver
 ipython notebook --profile=nbtheia
 # This will start a screen session and launch the server
-# On your own webbrowser go to 
-http://139.166.240.187:9999/ (The IP adress and port number)
+# On your own web browser go to 
+http://139.166.240.187:9999/ (The IP address and port number)
 of 
 theia.noc.soton.ac.uk:9999
 # type in your password and start a new notebook.
 # Mine are mostly readable to all so take a look for examples in
 # ~hb1g13/Python/notebooks
-# Now detatch the screen so you can close the teminal window
-# Ctrl+A+D - will detatch the screen so you can exit while the process 
+# Now detach the screen so you can close the terminal window
+# Ctrl+A+D - will detach the screen so you can exit while the process 
 # still runs
 # If you want to reattach the screen 
 screen -r nbserver
-# I'm super lazy so i've set up aliases in my .cshrc 
+# I'm super lazy so I've set up aliases in my .cshrc 
 # nbtheia etc to start the server and then I've bookmarked the IP addresses.
 # NB!!!! From outside the uni network you must VPN!
 

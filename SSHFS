@@ -1,21 +1,21 @@
 # Mounting remote file systems
-# This allows you to access the Unix filesystem direction from your computer
+# This allows you to access the Unix file system direction from your computer
 
-# Unbuntu: sudo apt-get install sshfs
-# Mac: google and install homebrew (you made need the gcc compiler and developer tools)
+# Ubuntu: sudo apt-get install sshfs
+# Mac: Google and install homebrew (you made need the gcc compiler and developer tools)
 #      in a terminal simply type:
 brew install sshfs
-#      Homebrew is cool it works similar to linux apt-get, yum comands etc so you can install 
+#      Homebrew is cool it works similar to Linux apt-get, yum commands etc so you can install 
 #      things like emacs and inkscape too.
 # Windows: I believe this is still possible, but running a Virtual Machine (IT will support this!)
-           is probably the easiest option and running linux!
+           is probably the easiest option and running Linux!
 #Mac/Linux:
-#Creat a folder in your home directory
+#Create a folder in your home directory
 mkdir NOC
 #Add the following to your .bashrc
 alias mountnoc='sshfs -o username@tethys.noc.soton.ac.uk:/ NOC' 
 # You can set whatever machine you like, and you can set it to your home directory 
-# here it's just set the the top directory and i've set a load of aliases such as
+# here it's just set the the top directory and I've set a load of aliases such as
 # home and scratch to navigate through quickly.
 # The -o sets ssfs to follow symbolic links - if you set to the top directory then 
 # you don't really need this option!
@@ -26,7 +26,7 @@ sudo umount NOC
 rm -rf NOC
 mkdir NOC
 mountnoc
-# Removing the mountpoint won't try and delete the filesystem itself 
+# Removing the mountpoint won't try and delete the file system itself 
 # NB removing files within the mountpoint does delete the files!
 
 # NB:
