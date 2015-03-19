@@ -1,11 +1,11 @@
 #~~~~~~~~~~~Useful Slurm commands~~~~~~~~~~~~#
 # For Slurm HPC job scheduler 
 ~~Starting notes:~~
-1) jobscripts need to be executable
+1) job scripts need to be executable
 2) any useful stuff please add
 
 ____The Basics___
-sbatch jobscript [sumbit your job right now 
+sbatch jobscript [submit your job right now 
                   to default queue.]
 sinfo [tells you what nodes are up, queues 
        available etc. Warning not always 
@@ -14,11 +14,11 @@ squeue [shows queue]
 ~~~~~~~~~~~~~~~~~
 ____Submission____
 sbatch --begin=NOW+4hours jobscript
-[sumbit this in at a certain time e.g.
+[submit this in at a certain time e.g.
  if the system is quiet at night and you
  are feeling nice]
 sbatch --dependency=afterok:JOBID
 [for iterative jobs, once the job has
- sucessfully ran then run the next one
+ successfully ran then run the next one
  - this is annoying to fill the queue with 
  these]

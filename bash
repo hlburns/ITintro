@@ -9,8 +9,8 @@ source ./.bashrc # will read it!
 # NB nocs bash version:
 bash --version
 # bash has changed over the years so the scripts you write on your bash 4.x
-# on your own machine may not work on the bash 2.x or bash 3.x . Noteably 
-# mathematic capability has changed between versions.
+# on your own machine may not work on the bash 2.x or bash 3.x . Notably 
+# mathematical capability has changed between versions.
 
 #So if you want this to be your default set up then simply add to your .login
 #before the exit statement:

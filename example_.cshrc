@@ -2,7 +2,7 @@ if ( -f /nerc/etc/cshrc ) source /nerc/etc/cshrc
 ################################################
 ##                                            ##
 ##  Example .cshrc file from Helen Burns      ##
-##   Original Template from Jeff Bludell      ##
+##   Original Template from Jeff Blundell      ##
 ##                                            ##
 ################################################
 # To use this file:
@@ -14,11 +14,11 @@ if ( -f /nerc/etc/cshrc ) source /nerc/etc/cshrc
 # Please note some mistakes with your path 
 # and you can lock yourself out of the system
 # this is easily rectified by mounting the 
-# nocs filesystem through sshfs and restoring
+# nocs file system through sshfs and restoring
 # your .cshrc to the original 
 # Or email IT!
 
-# First I'm gonna deffine my enviroment 
+# First I'm gonna deffine my environment 
 # Then I'm gonna set up my aliases etc
 
 set noclobber
@@ -35,7 +35,7 @@ if ( $?NERCARCH ) then
   if ( $NERCARCH == "linux" && $HOST_NAME != "charon" ) then
 # If it's not charon then do the set up the following:
 # Example here add your bin dir to your path
-# Fancier ls colors
+# Fancier ls colours
 # Clean up you path with special nerc env_clean thing
      setenv PATH ${PATH}:"/noc/users/$USER/bin"
      setenv PATH `/nerc/bin/env_clean -env PATH`
@@ -110,7 +110,7 @@ set prompt="`whoami`@`hostname`: "
 # Stop your history from being too crazy
 set history=50
 # Changing permissions:
-# chmod = change permisions
+# chmod = change permissions
 # og = for others and groups
 # + = add permission
 # - = remove permission

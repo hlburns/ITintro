@@ -21,7 +21,7 @@ endif
 ##  Setup my Linux environment                                                                       
 ##  =========================                                                                       
 ## For some machines you need to set different things
-## We'll start just setting up for everymachine but
+## We'll start just setting up for every machine but
 ## charon
 if ( $?NERCARCH ) then
   if ( $NERCARCH == "linux" && $HOST_NAME != "charon" ) then
@@ -44,7 +44,7 @@ endif
 # Speak to Jeff for better builds of the nco stuff though
 # Anaconda is currently under testing (Nov2014) but will become 
 # the default python package and is recommended for python users!
-# You have the oppotunity to kick that matlab habit now (swap to python! ) 
+# You have the opportunity to kick that matlab habit now (swap to python! ) 
 setenv ERESIZE 'no'
 setenv NEINIT 'key ] = csle'
 exit

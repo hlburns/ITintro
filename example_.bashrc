@@ -92,6 +92,6 @@ export PATH="/noc/users/$USER/bin:$PATH"
 #     this would be an example to set stuff up on themis, tethys,
 #     theia, mnemosyne etc. It looks for what kind of machine in 
 #     the if loop - In the future NOCs systems may have machines
-#     with centos (red hat) that will require an addtional if loop 
+#     with centos (red hat) that will require an additional if loop 
         fi
 fi                       
