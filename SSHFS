@@ -1,14 +1,28 @@
-# Mounting remote file systems
-# This allows you to access the Unix file system direction from your computer
-
-# Ubuntu: sudo apt-get install sshfs
-# Mac: Google and install homebrew (you made need the gcc compiler and developer tools)
+#~~~~~ Mounting remote file systems~~~~~#
+----------------------------------------
+# This allows you to access the Unix file system 
+# directly from your computer
+----------------------------------------
+__Instalation___
+~~~ Ubuntu:~~~
+sudo apt-get install sshfs
+~~~ Mac:~~~
+#       https://osxfuse.github.io/ 
+#       Install SSHFS and OSXFuse
+~~~Older Mac systems:~~~~
+#  Google and install homebrew
+#  (you made need the gcc compiler and developer tools)
 #      in a terminal simply type:
 brew install sshfs
-#      Homebrew is cool it works similar to Linux apt-get, yum commands etc so you can install 
-#      things like emacs and inkscape too.
-# Windows: I believe this is still possible, but running a Virtual Machine (IT will support this!)
-           is probably the easiest option and running Linux!
+# Homebrew is cool it works similar to Linux apt-get, 
+# yum commands etc so you can install things like emacs
+# and inkscape too.
+# Windows: I believe this is still possible, 
+           but running a Virtual Machine 
+           (IT will support this!) it's probably the 
+           easiest option and running Linux!
+-----------------------------------------
+___Application___
 #Mac/Linux:
 #Create a folder in your home directory
 mkdir NOC

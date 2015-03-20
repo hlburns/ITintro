@@ -1,0 +1,19 @@
+~~~~Useful command line tools~~~~
+# Find a nifty trick => put it here :)
+
+~Spelling~
+aspell -c file.txt [Interactive spellcheck]
+aspell -t -c file.tex [-t tell it to ignore
+                       latex macros]
+~grep editing~
+grep -v "phrases to be removed" File1 > Fileminusline
+[I autogen .bib files and this is great for removing 
+ urls and other crap]
+grep -sed [find and replace phrases]
+
+~bash~
+while [ -d /proc/PROCID ]; do sleep 1; done && command &
+[If you want to go to lunch but in 5 mins you need to run
+ the next command after another just find the tasks ID 
+ using ps and tell it to sleep until its done]
+ps fe -u $USER [list all my processes]
