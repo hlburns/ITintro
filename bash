@@ -14,11 +14,4 @@ bash --version
 
 #So if you want this to be your default set up then simply add to your .login
 #before the exit statement:
-bash && source ./.bashrc
-
-#If that doesn 't work: 
-
-#add to your .cshrc:
-alias bash      'setenv SHELL /bin/sh;exec $SHELL'
-#so you can simply type:
-bash
+exec /bin/bash --login

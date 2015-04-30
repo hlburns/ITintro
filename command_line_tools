@@ -9,7 +9,13 @@ aspell -t -c file.tex [-t tell it to ignore
 grep -v "phrases to be removed" File1 > Fileminusline
 [I autogen .bib files and this is great for removing 
  urls and other crap]
-grep -sed [find and replace phrases]
+
+~sed~
+sed -i 's/orignal_string/replacement_string/g' file
+[sed has a range of useful tricks, double spacing, 
+ comma separating, line nos etc. this is just find 
+ and replace]
+
 
 ~bash~
 while [ -d /proc/PROCID ]; do sleep 1; done && command &
