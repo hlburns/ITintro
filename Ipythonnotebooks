@@ -96,3 +96,16 @@ setenv PATH "${PATH}:/noc/users/$USER/bin"
 # If you get an error email me with the error as there maybe a missing library
 # file you need. H.Burns@noc.soton.ac.uk
 
+#~~~~TROUBLESHOOTING~~~~#
+# Backends: Trouble with pyside/ matplotlib - you will need to edit:
+/noc/users/hb1g13/.config/matplotlib/matplotlibrc
+# If you are using a more complex setup that might not be the right config file
+# you can find out using:
+import matplotlib
+matplotlib.matplotlib_fname()
+# Normally I find switching away from Pyside fixes most things!
+#Kernal randomly dying with following error:
+#ipython notebook kernal died : cannot connect to X server localhost:20.0
+FIX: %matplotlib inline
+# This is some craxy X forwarding error - I don't know why it's not beign 
+# picked up in profile config file :s
