@@ -6,7 +6,7 @@ source activate my_anaconda # In bash shell, add to .bashrc
                               csh command is slightly different 
 
 # NOTE IN CSH you need to use full path like:
-sourece ~/.conda/envs/bin/activate my_anaconda 
+source ~/.conda/envs/bin/activate my_anaconda 
 
 # This has created a virtual environment where you can conda and pip install 
 # your own packages and updates alongside the system set up.
