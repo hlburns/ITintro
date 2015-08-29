@@ -1,0 +1,406 @@
+\documentclass[a4paper,12pt, openright, titlepage]{book}
+\usepackage{appendix}
+\usepackage{tocbibind}
+\usepackage{tocloft}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{subfig}
+\usepackage{natbib}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{wrapfig}
+\usepackage{tabularx}
+\usepackage{sidecap}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{wasysym}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage{mathtools}
+\usepackage{pdflscape}
+\usepackage[british]{babel}
+\usepackage{enumitem}
+\newcommand\finline[3][]{\begin{myfont}[#1]{#2}#3\end{myfont}}%
+\newlist{abbrv}{itemize}{1}
+\setlist[abbrv,1]{label=,labelwidth=1in,align=parleft,itemsep=-0.5\baselineskip,leftmargin=1in}
+\usepackage[a4paper, top=80pt, bottom=60pt, left=60pt, right=60pt]{geometry}
+%\usepackage[top=11, bottom=20, left=5, right=5]{geometry}
+\bibpunct{(}{)}{;}{a}{,}{,}
+\pagestyle{fancy}
+\linespread{1.5}
+%from Ed Butler
+\setlength{\headheight}{15pt}
+\setlength{\oddsidemargin}{15mm}
+\raggedright
+\setlength{\parskip}{10pt }
+\setlength{\parindent}{0.5 cm}
+\setlength{\textwidth}{148 mm}
+\fancyheadoffset{1 cm}
+\fancyhead[RO]{Your Name}
+\fancyhf{}
+\fancyhead[R]{Your Name}
+\fancyhead[L]{\leftmark} % 1. sectionname
+\fancyfoot[C]{\thepage}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%%% To add code %%%%
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Fortran,
+  aboveskip=2mm,
+  belowskip=2mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3
+}
+
+% ENVIRONMENT FOR NEW FONT
+\newenvironment{myfont}[2][]{\csname#2\endcsname[#1]}{}
+
+\newcommand{\Alpine}[1][]{\fontfamily{Alpine}#1\selectfont}
+
+\AtBeginDocument{ 
+%%%%%% So I made my own titlepage %%%%%
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%   HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE University of Southampton}\\[1.3cm] % Name of your university/college
+\textsc{\Large National Oceanography Centre}\\[0.4cm] % Major heading such as course name
+\textsc{\Large \&}\\[0.4cm] % Major heading such as course name
+\textsc{\Large OTHER INSTITUTES?}\\[0.4cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%   TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Your Awesome Title}\\[0.4cm] % Title of your document
+\HRule \\[1.1cm]
+ %----------------------------------------------------------------------------------------
+\textsc{Thesis for the degree of Doctor of Philosophy}\\[1.2cm]
+%----------------------------------------------------------------------------------------
+%   DATE SECTION
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%   AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+ Your name
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Supervisors:} \\
+Jo\"{e}l J.-M. Hirschi, George Nurser, James Dyke and Kevin Oliver % Supervisor's Name
+\end{flushright}
+\end{minipage}\\[2cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%   DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+%   LOGO SECTION
+%----------------------------------------------------------------------------------------
+\includegraphics[width=0.8\textwidth]{logos.png}%
+
+\vfill %Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+\justify
+%\begin{abstract}
+%\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\center % Center everything on the page
+}
+
+
+% Centered title for ToC, LoF, LoT
+\renewcommand{\cfttoctitlefont}{\hfill\Huge\bfseries}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftloftitlefont}{\hfill\Huge\bfseries}
+\renewcommand{\cftafterloftitle}{\hfill}
+\renewcommand{\cftlottitlefont}{\hfill\Huge\bfseries}
+\renewcommand{\cftafterlottitle}{\hfill}
+
+% Leaders for chapter entries
+\renewcommand\cftchapdotsep{\cftdotsep}
+
+% Add space to account for new chapter numbering schema
+\renewcommand\cftchapnumwidth{3em}
+\renewcommand\cftsecindent{3em}
+
+% Redefine representation for chapter (and section) counters
+\renewcommand\thechapter{\arabic{chapter}}
+\renewcommand\thesection{\arabic{chapter}.\arabic{section}}
+
+
+
+\begin{document}
+\frontmatter
+\chapter[Abstract]{ }
+%\addcontentsline{toc}{chapter}{Abstract}
+. \\[-5.51cm]
+\textsc{ \textbf{\textsc{UNIVERSITY OF SOUTHAMPTON}}}\\ 
+\textsc{\large \uline{ABSTRACT}}\\[0.1cm]
+
+\textsc{\small FACULTY OF NATURAL AND ENVIRONMENTAL SCIENCES}\\[0.05cm] 
+\textsc{\footnotesize National Oceanography Centre \& Institute for Complex Systems Simulation}\\[0.05cm]
+\textsc{\uline{Doctor of Philosophy}}\\[0.1cm]
+
+\textbf{\textsc{\large Ocean model utility dependence on horizontal resolution}}\\[0.01cm]
+{by Maike Sonnewald}\\[0.2cm]
+\justify
+%Motivation
+\linespread{1}
+This thesis examines the change in ocean model utility with changing horizontal resolution. Oceans are a crucial part of the climate system, with numerical models offering important insights into our mechanistic understanding. We use a 30 year integration (1978 to 2007) of the NEMO model at 1$^{\circ}$, 1/4$^{\circ}$ and 1/12$^{\circ}$ to investigate the impact of modelling choices associated with horizontal resolution changes. Changes in degrees of freedom associated with the increasing resolution allow alternative energy dissipation pathways, with potential impact on model accuracy. We develop a measure of utility based on an estimate of the accuracy, as well as a penalisation which scales with resolution. Overall, accuracy is thought to increase with resolution, and we examine the associated change in utility on a range of model fields. \\
+
+The exploration of the NEMO model assesses the surface mixed layer, deep ($>$2000m) to surface ($<$2000m) communication through the ocean interior and the changes in the meridional overturning with topographic interactions. Assessing these areas, we illustrate potential changes in the energy pathways in the system. We investigate the surface in terms of the mixed layer depth globally, but also investigating a case study in the Southern Ocean. We find that the mixed layer does not change significantly with resolution, and that NEMO compares well with observations. Minor changes with resolution are attributed to increased numbers of fronts with increasing resolution. When the mixed layer is assessed, we see no significant change with resolution, and so find that 1$^{\circ}$ has the highest utility. For our case study, we investigate the zonally asymmetric deepening of the mixed layer in the Southern Ocean. We find that the stratification set by the advection is key, and confirm this using the 1D Price-Weller-Pinkel model.\\
+
+The communication between the surface and the deep ocean is assessed by looking at the steric height variability, and specifically its covariance between the surface and the deep. We find that there are large changes with resolution, and attribute these to the higher resolutions' ability to include eddy effects. This suggests that the Gent-McWilliams scheme that is active at low resolution fails to capture this. We look at the low and high frequency parts of the variance, finding that strongly eddying regions dominate the high frequency steric height covariance, confirming the importance of eddies. The ratio between the surface and the deep steric height shows poor utility in both ORCA1 and ORCA025, while we find seasonal leakage obscuring our accuracy measure for the steric height.\\
+
+The overturning is assessed in density space, and we notice a strengthening of the anti-clockwise component in the Southern Ocean. Decomposing the transport into its baroclinic and barotropic components, we find that changes in the baroclinic overturning can account for this. The lack of western boundaries in the Southern Ocean suggests that eddies, as well as interaction with topography, are especially important here, and we investigate the change in the balance of forcing in terms of the associated vortex stretching. We assess this in terms of the bottom pressure torque, but find the major changes in the baroclinic component of the bottom pressure torque. We find that increasing the resolution still leads to increased utility, particularly in the barotropic and baroclinic density space overturning case.\\
+
+%\thispagestyle{empty}
+The major implications of our results are that low resolution is appropriate for fields such as the mixed layer depth, but increasing the resolution is seen to improve the mean overturning through allowing eddy activity.\\ 
+
+
+%\end{abstract}
+\clearpage
+\tableofcontents
+\clearpage
+\listoftables
+\listoffigures
+
+\clearpage
+\chapter[Declaration of authorship]{ }
+%\addcontentsline{toc}{chapter}{Declaration of authorship}
+%--------------------------------------------------------------------------------------------
+%\thispagestyle{empty}
+. \\[-6.51cm]
+\textbf{\textsc{\Large Academic Thesis: Declaration Of Authorship}}\\[0.5cm]
+
+
+\noindent I, Maike Sonnewald, declare that this thesis and the work presented in it are my own and has been generated by me as the result of my own original research.\\[0.3cm]
+
+\textbf{\textsc{\large Ocean model utility dependence on horizontal resolution}}\\[0.3cm]
+
+\noindent I confirm that:\\[-1.5cm]
+\begin{enumerate}
+\item This work was done wholly or mainly while in candidature for a research degree at this University;
+\item Where any part of this thesis has previously been submitted for a degree or any other qualification at this University or any other institution, this has been clearly stated;
+\item Where I have consulted the published work of others, this is always clearly attributed;
+\item Where I have quoted from the work of others, the source is always given. With the exception of such quotations, this thesis is entirely my own work;
+\item I have acknowledged all main sources of help;
+\item Where the thesis is based on work done by myself jointly with others, I have made clear exactly what was done by others and what I have contributed myself;
+\item Either none of this work has been published before submission, or parts of this work have been published as: \\
+ -\textbf{Sonnewald, M.}, Hirschi, J. J.M. and Marsh, R., 2013, Oceanic dominance of interannual subtropical North Atlantic heat content variability, Ocean Sci. Discuss., 10, 27-53, doi:10.5194/osd-10-27-2013.\\
+ -Bulczak, A.I., Bacon, S., Naveira Garabato, A.C., Ridout, A., \textbf{Sonnewald, M.}, and Laxon, S.W., 2015, Seasonal variability of sea surface height in the coastal waters and deep basins of the Nordic Seas, Geophysical Research Letters, 42 (1), 113-120. 10.1002/2014GL061796.
+\end{enumerate}
+
+Signed:\hrulefill\\%[1.5cm]
+
+
+Date:\hrulefill\\
+
+\clearpage
+
+%---------------------------------------------------------------------------------------------
+\chapter{Acknowledgements}
+
+\clearpage
+
+\chapter{Symbols and abbreviations}
+%I could not find an automated way of doing this sadly...
+\begin{abbrv}
+
+\item[$\alpha$]              Coefficient of thermal expansion\\
+\item[$\beta$]               Coefficient of expansion due to salinity; also beta plane approximation\\
+\item[$\zeta$]               Relative vorticity\\
+\item[$\eta$]                Surface elevation (SSH)\\
+\item[$\theta$]              Latitude\\
+\item[$\kappa$]              Thermal conductivity\\
+\item[$\lambda$]             Lyapunov exponent\\
+\item[$\nu$]                 Kinematic viscosity\\
+\item[$\rho$]                Density\\
+\item[$\sigma$]              Denisty; also standard deviation\\    
+\item[$\tau$]                Stress term at surface ($s$) or bottom ($b$); also wind stress\\
+\item[$\Psi$]                Streamfunction\\
+\item[$\Omega$]              Angular rotation rate of Earth\\
+\item[$\Sigma$]              Matrix of singular values\\
+\item[ ] $ $%---------------------------------------------------
+\item[$b$]                   Buoyancy\\
+\item[$c$]                   Coefficient of accuracy\\
+\item[$c_{p}$]               Specific heat capacity\\
+\item[$C_{D}$]               Drag coefficient\\
+\item[$\overline{e}$]        Turbulent kinetic energy\\
+\item[$en$]                  Energy\\
+\item[$f$]                   Planetary vorticity\\
+\item[$g$]                   Acceleration due to gravity\\
+\item[i, j, k]               Rectangular Cartesian coordinates\\
+\item[$s$]                   Seconds\\
+\item[$t$]                   Time\\
+\item[$u,v,w$]               Velocity components\\
+\item[\textbf{v}]            Velocity vector\\
+\item[$x, y, z$]             Rectangluar cartesian coordinates\\
+\item[$z$]                   Vertical coordinate\\
+\item[ ] $ $%---------------------------------------------------
+\item[A]                     Accuracy; also area\\
+\item[AABW]                  Antarctic Bottom Water\\
+\item[ACC]                   Antarctic Circumpolar Current\\
+\item[C]                     Computational cost\\
+\item[CFL]                   Courant-Friedrichs-Lewy condition\\
+\item[ENSO]                  El Ni\~{n}o Southern Oscillation\\
+\item[EOF]                   Empirical Orthogonal Function\\
+\item[E-P]                   Evaporation-precipitation\\
+\item[GCM]                   General circulation model\\ 
+\item[HPC]                   High Performance Computing\\
+\item[I]                     Analytical inconvenience\\
+\item[$K_{m}, K_{\rho}$]     vertical eddy viscosity and diffusivity\\
+\item[MBF]                   Model buoyancy flux\\
+\item[MLD]                   Mixed Layer Depth\\
+\item[N]                     Brunt-V\"{a}is\"{a}l\"{a} frequency; also dimensions $i \times j$\\
+\item[NADW]                  North Atlantic Deep Water\\
+\item[NEMO]                  Nucleus for European Modelling of the Ocean\\
+\item[StD]                   Standard Deviation\\
+\item[SSH]                   Sea Surface Height\\
+\item[SST]                   Sea Surface Temperature\\
+\item[SSS]                   Sea Surface Salinity\\
+\item[T]		     Temperature; also transport\\
+\item[TKE]                   Turbulent Kinetic Energy\\
+\item[TBF]                   Thermal buoyancy flux\\
+\item[S]                     Salinity; also storage space\\
+\item[HBF]                   Haline buoyancy flux\\
+\item[P]                     Pressure\\
+\item[Prt]                   Prandtl number\\
+\item[PDF]                   Probability Distribution Function\\
+\item[PWP]                   Price-Weller-Pinkel model \citep{PWP}\\
+\item[$R_{a}$]               Rayleigh number\\
+\item[$R_{b}$, $R_{g}$]      Bulk Richardson number and gradient Richardson number\\
+\item[U, V]                  Velocity components; also wind speed; also unitary matrix\\
+\item[WBC]                   Western Boundary Current\\
+\item[$Q_{0}$]               Air-sea heat flux\\
+\end{abbrv}
+
+%\thispagestyle{empty}
+\clearpage
+\mainmatter
+
+\linespread{1.5}
+
+\input{/home/maike/Documents/thesis/introduction/introduction}%
+ \input{/home/maike/Documents/thesis/methods/nemo}%
+ %\input{/home/maike/Documents/thesis/methods/grid.tex}
+% %\input{/home/maike/Documents/thesis/methods}
+ \input{/home/maike/Documents/thesis/metrics}%
+ \input{/home/maike/Documents/thesis/acc/acc}%
+ \input{/home/maike/Documents/thesis/utility/results.tex}%
+% % % % 
+\input{/home/maike/Documents/thesis/MLD/mld}%
+ \input{/home/maike/Documents/thesis/MLD/deepening}%
+% 
+\input{/home/maike/Documents/thesis/stericHeight/stericHeight}%
+\input{/home/maike/Documents/thesis/SSH/ssh}%
+\input{/home/maike/Documents/thesis/bottomPressure/bottomPressure}%
+\input{/home/maike/Documents/thesis/highFreq/highFreq.txt}%
+% % 
+\input{/home/maike/Documents/thesis/sverdrupBalance/theory.tex}%
+ \input{/home/maike/Documents/thesis/overturning/overturning1.tex}%
+% \input{/home/maike/Documents/thesis/eddySatComp/eddySatComp.tex}%
+% 
+% 
+\input{/home/maike/Documents/thesis/sverdrupBalance/sverdrupRelation.tex}%
+\input{/home/maike/Documents/thesis/bottomTorque/bottomTorque.tex}%
+\input{/home/maike/Documents/thesis/JEBAR/jebar.tex}%
+\input{/home/maike/Documents/thesis/sverdrupBalance/summany.tex}%
+% % 
+  \input{/home/maike/Documents/thesis/utility/utility.tex}%
+% % 
+  \input{/home/maike/Documents/thesis/exponents/exponents.tex}%
+
+% \input{/home/maike/Documents/thesis/results}
+  \input{/home/maike/Documents/thesis/Discussion.tex}%
+ \input{/home/maike/Documents/thesis/conclusion.tex}%
+% 
+% 
+% \linespread{1}
+% 
+% 
+\pagebreak
+%\input{/home/maike/Documents/thesis/appendix}
+%
+
+\appendix
+% \appendixpage
+ \noappendicestocpagenum
+%\addappheadtotoc
+%\begin{appendix}
+ 
+%\appendix 
+\addcontentsline{toc}{chapter}{Appendix}
+\chapter*{Appendix}\label{appendix}
+%\addtocontents{toc}{\protect\contentsline{chapter}{Appendix:}{}}
+
+\input{/home/maike/Documents/thesis/appendix.tex}
+\pagebreak
+\section{Published papers}
+\subsection{Atlantic ocean meridional heat transport at 26$^{\circ}$N: Impact on subtropical ocean heat content variability}\label{paperOHC}
+During the thesis, work has also been ongoing continuing on from my first Masters degree. This paper is now published in Ocean Science, and uses a box model to assess and unpick the heat transport variability in the subtropical North Atlantic. The paper uses both observations and the high resolution GCM OCCAM (1/12$^{\circ}$), and determines that the ocean can play a key role in understanding heat content variability. 
+\includepdf[pages={1-}]{os-9-1057-2013.pdf}
+\subsection{Seasonal variability of sea surface height in the coastal waters and deep basins of the Nordic Seas}\label{paperSH}
+The work in this thesis was incorporated into the paper by Anna Bulczak, with some additional work done to confirm haline and thermal contributions to the steric changes discussed in the paper.
+\includepdf[pages={1-}]{grl52467.pdf}
+\section{Example code}
+To illustrate our work flow, we add some examples of code.
+\subsection*{Collating data}\label{collating}
+%\inputminted[fontsize=\footnotesize]{csh}{collating.csh}
+\lstinputlisting[language=csh]{collating.csh}
+%% I'm sure you get the gist...
+
+\backmatter
+
+\clearpage
+
+
+
+\end{document}
+
+
