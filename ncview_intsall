@@ -1,0 +1,17 @@
+# For some reason ncview would not work on any machine 
+# Installed my own local version using following commands
+
+$ wget ftp://cirrus.ucsd.edu/pub/ncview/ncview-2.1.2.tar.gz
+$ tar xvfz ncview-2.1.2.tar.gz
+$ cd ncview-2.1.2
+$ ./configure --with-netcdf_incdir=$HOME/.conda/envs/my_anaconda/ \
+              --with-netcdf_libname=libnetcdf.so.7 \
+              --with-netcdf_libdir=$HOME/.conda/envs/my_anaconda/lib/ \
+              --prefix=$HOME/bin/ncview-2.1.2 \
+$ make
+$ make install
+
+# config notes PATH to anaconda if have environment set up otherwise remove these lines
+
+# Useful installation instructions (when you have no root access for useful stuff here:
+https://pythonhosted.org/cdb_query/install.html

@@ -9,5 +9,5 @@ If you are completely new first read the example files
 .login 
 these provide a quick set up on the systems to get you going
 
-The rest of the stuff is for Python, Bash and verison control
+The rest of the stuff is for Python, Bash and version control
 

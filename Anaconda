@@ -11,7 +11,7 @@ source ~/.conda/envs/bin/activate my_anaconda
 # This has created a virtual environment where you can conda and pip install 
 # your own packages and updates alongside the system set up.
 
-# FULL INSTALATION INSTRUCTIONS:
+# FULL INSTALLATION INSTRUCTIONS:
 # I've left this in this repository as the information my be useful 
 # If you wish to install anaconda on your own machine
 
