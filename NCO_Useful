@@ -1,5 +1,5 @@
 #~~~~~~~~Useful NCO Commands~~~~~~~~#
-#~~~~~###+++NB_INPROGRESS+++###~~~~~#
+#~~~~~###+++NB_IN PROGRESS+++###~~~~~#
 We use netcdf files in oceanography a 
 lot. C is not the most familiar language 
 to most of us, but it's fast and efficient.
@@ -9,15 +9,15 @@ but have a really easy to use interface.
 __Averaging__
 ncra File.nc Averagedfile.nc
 ncra -d T,1,12 File.nc Averagedfile.nc
-[-d what dimenstions along]
+[-d what dimensions along]
 [-v which variables]
 [1,12 from 1 to 12 timesteps i.e. monthly 
  to yearly]
 
-__Concatanating__
+__Concatenating__
 ncrcat File1.nc File2.nc File1_then2.nc
 
-__Spliting__
+__Splitting__
 ncks 
 [kitchen sink - want to split a file up]
 

@@ -107,5 +107,5 @@ matplotlib.matplotlib_fname()
 #Kernal randomly dying with following error:
 #ipython notebook kernal died : cannot connect to X server localhost:20.0
 FIX: %matplotlib inline
-# This is some craxy X forwarding error - I don't know why it's not beign 
+# This is some crazy X forwarding error - I don't know why it's not being 
 # picked up in profile config file :s
