@@ -1,7 +1,7 @@
 # NOTE ANACONDA NOW AVAILABLE ON THE SYSTEM THROUGH SETUP!!
 # YOU CAN ADD YOUR OWN STUFF USING FOLLOWING INSTRUCTIONS:
 setup v2014.10.29 anaconda
-conda create -n my_root --clone=/nerc/packages/anaconda/v2014.10.29/anaconda
+conda create -n my_anaconda --clone=/nerc/packages/anaconda/v2014.10.29/anaconda
 source activate my_anaconda # In bash shell, add to .bashrc
                               csh command is slightly different 
 
