@@ -1,0 +1,63 @@
+###########################################################
+##     1)  Virtual environments                          ## 
+##     2) No screen sessions                             ##
+##     3) Debugging                                      ##
+###########################################################
+
+1) Virtual Environments
+- If you want update and extral packages you can install them by
+  setting up a virtual environment:
+setup v2014.10.29 anaconda
+conda create -n my_anaconda --clone=/nerc/packages/anaconda/v2014.10.29/anaconda
+--
+Bash:
+source activate my_anaconda # In bash shell, add to .bashrc
+                              you're done!
+--
+CSH (nocs default):
+source ~/.conda/envs/bin/activate my_anaconda 
+
+add to .cshrc
+source ~/.conda/envs/bin/activate my_anaconda
+setenv PATH "/noc/users/${USER}/.conda/envs/my_root/bin:${PATH}"
+--
+You will need to restart any notebooks for this to take effect!
+
+You can now:
+conda install <package>
+pip install <package>
+conda update <package>
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2) No screen
+You can run a notebook server fully in the background:
+
+ipython notebook --profile=<profilename> ~/output.txt &
+
+now this will be hard to kill so you need to know this command:
+
+ps fe -u $USER 
+
+This will list all your processes to kill one of them:
+
+kill -9 <process ID>
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3) Debugging
+
+Any time I find a problem I'll add the problem and fix here 
+to help others save time:
+##
+##Backends: Trouble with pyside/ matplotlib - you will need to edit:
+/noc/users/hb1g13/.config/matplotlib/matplotlibrc
+# If you are using a more complex setup that might not be the right config file
+# you can find out using:
+import matplotlib
+matplotlib.matplotlib_fname()
+# Normally I find switching away from Pyside fixes most things!
+##
+#Kernal randomly dying with following error:
+#ipython notebook kernal died : cannot connect to X server localhost:20.0
+FIX: %matplotlib inline
+# This is some crazy X forwarding error - I don't know why it's not being 
+# picked up in profile config file :s
