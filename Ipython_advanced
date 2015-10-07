@@ -32,7 +32,7 @@ conda update <package>
 2) No screen
 You can run a notebook server fully in the background:
 
-ipython notebook --profile=<profilename> ~/output.txt &
+ipython notebook --profile=<profilename> > ~/output.txt &
 
 now this will be hard to kill so you need to know this command:
 
