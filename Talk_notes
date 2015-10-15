@@ -1,0 +1,42 @@
+Include in talk:
+
+# Better intro:
+Who/why:
+               comments on who for: people heading beyond constraints of desktop.
+                                    beyond = bandwidth, cpu, ram, software
+               most powerful systems run on Linux(UNIX) OS & many big models 
+                    + public domain software packages assume a linux enviroment
+               Comment of order of magnitude more powerful (ram and bandwidth, 
+	       nearly one signle core or << multicore!)
+               Most of powerful systems (inc. HPC) run Linux.
+	       University and National HPC systems and data analysis facilities run Linux
+
+Aims: Not detail, just an intro to ideas, falicities and SOURCES OF INFO for the future!
+
+What:
+               Linux is OS + commands --> interpretation of commands by shell in user defined environment 
+                                          (Shell kernal etc explaination? - Brazil nut diagram)
+               Setting up enviroment requires learning some new tricks. (no pain no gain)
+               Serveral (irritatingly) different shells exist: csh and bash 
+               Open source sowftware, mostly installed - how to make available to users.
+
+Vince will give an Intro to facilities and how to access inc from outside 
+---> VINCE TALK (get him to big up new intranet)
+
+# Jeff:
+
+Wiki points to useful websites + training material. (not much taught courses) "Learn by doing".
+Learn from collegues, online material, or ARCHER courses
+MATLAB: !!!!!!! Matserv !!!!!!! Limitations: Consider moving to Python.
+Python: Open source, many "tool boxes", growing user base, well established on NOCs, increasing use in OES.
+        Notes on online info on the Wiki
+Data/File Space:  Backed up vs not. Talk to your supervisor if you hit disk space problems; local provision
+	          if fast, high quality and increasingly cheap. NB linux file protection (note on wiki to come). 
+Resources: You may have to consider RAM and CPU in a way you didn't before. Wide range machines available on 
+           on intranet (including mini HPC(super computer)).
+           Other Key resource: Data from high res models (Voluminous)
+	   Shared, need to be considerate and use ```` top ```` to check before using.
+Linux: Dont be frightened only 30-40 commands (on Wiki)
+
+Dont be afraid to ask. You probably will need some guidanc... even if its just on what to google...
+  
