@@ -1,163 +1,213 @@
 <!DOCTYPE html>
 <html>
-  <!-- Header added by git hub page generator -->
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <!-- Google analytics (allow traffic stats) -->
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>hlburns</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="ITintro">
+<link rel="canonical" href="https://hlburns.github.io/">
 
-  ga('create', 'UA-56290374-1', 'auto');
-  ga('send', 'pageview');
+<!-- Google analytics -->
 
-     </script>
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title> hlburns repository </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="My IT notes">
-    <link rel="canonical" href="http://hlburns.github.io/ITintro/>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-56290374-1', 'auto');
+ga('send', 'pageview');
+</script>
 
-  </head>
+<!-- STYLING FROM BOOTSTRAP! -->
 
-  <body>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Chivo:900" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+<link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+<!-- Header added by git hub page generator -->
+<!-- Google analytics (allow traffic stats) --><!--[if lt IE 9]>                                                                                                                                             
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>                                                                                                                                        
+<![endif]-->
+</head>
+    <body id="page-top" class="index">
     <div id="container">
-      <div class="inner">
+    <div class="inner">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+           <div class="navbar-header page-scroll">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand page scroll" href="#page-top">hlburns</a>
+           </div>
+           <div id="navbar" class="collapse navbar-collapse">
+             <ul class="nav navbar-nav navbar-right">
+               <li class="hidden"><a href="#page-top"></a></li>
+             <li><a class="page-scroll" href="#unix">UNIX INTRO</a></li>
+             <li><a class="page-scroll" href="#python">PYTHON</a></li>
+             <li><a class="page-scroll" href="#tools">Useful Tools and Links</a></li>
+             <li><a class="page-scroll" href="#git">Git</a></li>
+             <li><a class="page-scroll" href="#hpc">HPC</a></li>
+             <li><a class="pages-scroll" href="#web">Web Stuff</a></li>
+             </ul>
+           </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    <!-- HEADER -->
+    <header>
+        <div class="container-fluid" style="margin-top: 40px">
+          <center>
+          <h1>Scientific Computing in Oceanogrpahy</h1>
+          <h2>Useful Tips</h2>
+          </center>
+         </div>
+    </header>
 
-        <header>
-          <h1>Useful IT notes for Physical Oceanographers</h1>
-          <h2>Found out how to do something cool or useful? Share it here :)</h2>
-        </header>
+<!-- HEADING END -->
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/hlburns/ITintro/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/hlburns/ITintro/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/hlburns/ITintro" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+    <section id="about" class=""> 
+    <h2><a name="welcome-to-the-physical-oceanography-repository" class="anchor" href="#welcome-to-the-physical-oceanography-repository"><span class="octicon octicon-link"></span></a>Welcome to the Physica
+l Oceanography Repository</h2>
+    <p>I've set up a github repository with some useful setup files.
+    I hope these are useful and straight forward. You can download the
+    whole folder using the links at the top of the page or follow the links
+    below to individual files.</p>
+    <p>The full wiki and repository is <a href="https://github.com/hlburns/ITintro/wiki" target="blank">here</a></p>
+    <p> <i> This Site is still progress as I learn html ;) </i>
+    </p>
+    <h3>
+    <hr>
+    </section>
 
-        <hr>
+    <section id="unix">
+    <h3><a name="Unix" class="anchor" href="#unix"><span class="octicon octicon-link"></span></a>UNIX:</h3>
+    <hr><ul>
+    <p> Most powerful systems run on Linux(UNIX) OS & many big models and public domain software packages assume a linux enviroment. Linux works through interpretation of commands by a <a href="http://www.
+tutorialspoint.com/unix/unix-shell.htm" target="_blank">shell</a> in user defined environment.
+    </p>
+    <li>New to the unix systems? Take a look at <a href="https://github.com/hlburns/ITintro/wiki/.example_.cshrc" target="_blank">example_.cshrc</a> and <a href="https://github.com/hlburns/ITintro/wiki/exa
+mple_.login" target="_blank">example_.login</a><i>(These help define that environment to autmatically load in software etc)</i> </li>
+    <li> Swapping shells? Take a look at <a href="https://github.com/hlburns/ITintro/blob/master/bash" target="_blank">bash</a> and <a href="https://github.com/hlburns/ITintro/blob/master/example_.bashrc" 
+target="_blank">example_.bashrc</a>
+    </li>
+    <li> To get started: <a href="https://github.com/hlburns/ITintro/blob/master/top30.pdf" target="_blank">Top 30 Unix commands. </a>
+    </li>
+    </ul>
+    </section>
+    <hr>
 
-        <section id="main_content">
-          <h2>
-<a name="welcome-to-the-physical-oceanography-repository" class="anchor" href="#welcome-to-the-physical-oceanography-repository"><span class="octicon octicon-link"></span></a>Welcome to the Physical Oceanography Repository</h2>
+    <h3></h3>
+    <section id="python">
+      <h3><a name="Ipython-and-notebooks" class="anchor" href="#Ipython-and-notebooks"><span class="octicon octicon-link"></span></a>PYTHON:</h3>
+      <hr>
+      <ul>
+	<p> Python is an open source programming language with many "tool boxes" and a growing user base. It's well established on NOCs and has an increasing userbase in OES. For those thinking about switc
+hing to Python it's worth noting it's promotes better programming techniques and handles large datasets well. Personally the fact is open source and you can share your scripts with anyone regardless of whe
+ther they can afford expensive propriatory software is also pretty important! If you're worried about user friendlyness, fear no more! Python now has great GUIs such as Spyder and Ipython Notebooks!</p>
+Some Starting info:
+	<li> A great presentation on <a href="https://github.com/ResearchComputing/Final_Tutorials/blob/master/Python_Matlab_Users/python_matlab_users.pdf" target="_blank">switching from MATLAB to Python</
+a>. By Shelley Knuth </li>
+	<li> A great course on <a href="https://github.com/rabernat/python_teaching" target="_blank">python in Ocean Sciences </a>. By Ryan Abernathey.
+	</li>
+	<li> <a href="http://nbviewer.ipython.org/github/ipython/ipython/tree/2.x/examples/" target="_blank">Ipython how tos notebooks</a></li>
+	Ipython Notebooks (Also great example code in some of these links)
+	<li>Kick that MATLAB habit? This is how to set up <a href="https://github.com/hlburns/ITintro/blob/master/Anaconda" target="_blank">Anaconda</a>
+	  and <a href="https://github.com/hlburns/ITintro/wiki/Ipython-Notebooks" target="_blank">Ipython notebooks</a></li>
+	<li> Here is a collection of useful notebooks <a href="http://nbviewer.ipython.org/github/hlburns/Notebooks/blob/master/Example_notebooks/" target="_blank">Examples</a> </li>
+	<li> Generating data for MITgcm <a href="http://nbviewer.ipython.org/github/hlburns/Notebooks/blob/master/Gendata_notebooks/Gendata_Nchannel.ipynb" target="_blank">Gendata.ipynb</a> </li>
+	<li> Fantastic introductory fludid dynamic and python notes from Lorena Barba <a href="http://nbviewer.ipython.org/github/barbagroup/CFDPython/tree/master/lessons/" target="_blank">CFD notebook vie
+wer</a> </li>
+	<li> <a href="https://github.com/hlburns/ITintro/wiki/Ipython-Advanced" target="_blank">A few extra tips once you start using thenotebooks</a> (virtual environments etc) </li>
+	If you're interested in seriously using python check out:<a href="http://pyaos.johnny-lin.com/" target="_blank">PyAOS</a> 
+      </ul>
+      <hr>
+      <h3></h3>
+      </section>
+    <section id="tools">
+    <h3><a name="Useful-tools-and-links" class="anchor" href="#Useful-bash-scripts"><span class="octicon octicon-link"></span></a>Useful Tools and Links:</h3>
+    Many of us use NetCDF files:
+    <li> Easy manipulation of netcdf <a href="https://github.com/hlburns/ITintro/wiki/NCO" target="_blank">NCO notes</a>
+    </li>
+    Mounting Remote File systems (so they look like you've just plugged in an external hard drive!)
+    <li> <a href=https://github.com/hlburns/ITintro/wiki/SSHFS target="_blank">SSHFS</a>
+    Random useful command line tools I have found are <a href=https://github.com/hlburns/ITintro/wiki/Command-line-tools target="_blank"> here.</a>
+    <p>General Very Usefull links:</p>
+    <ul>
+      <li> <a href="http://overapi.com/python/" target="_blank">Cheat sheet for most programming languages</a></li>
+      <li> <a href="http://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf" target="_blank">List of emacs commands</a></li>
+      <li> <a href="http://www.albany.edu/faculty/hy973732/ist535/vi_editor_commands.pdf" target="_blank">List of VI commands</a></li>
+      <li> <a href="http://www.codecademy.com/" target="_blank">Codecademy interactive tutorials</a></li>
+      <li> Useful topics from NCAS software carpentry, on everythingfrom UNIX to parallel programming and much more! <a href="http://www.ceda.ac.uk/ncas-reading-2015/" target="_blank">Found	here</a> </li
+>
+    </ul>
+    </section>
+   
 
-<p>I've set up a github repository with some useful setup files. I hope these are useful and straight forward. You can download the whole folder using the links at the top of the page or follow the links below to individual files.
-The full wiki and repository is <a href="https://github.com/hlburns/ITintro/wiki"target="blank">here</a> 
-</p>
+    <section id="hpc">
+      <h3></h3>
+      <h3><a name="HPC" class="anchor" href="#HPC"><span class="octicon octicon-link"></span></a>High Performance Computing:</h3>
+      High Performanc Computers and essentially super computers where you can run large parallel jobs. This is used for modeling and large data set analysis! There is a lot of useful info on the ARCHER web
+site (UK National supercomputer)! And I've stuck up some example job scheduler (PBS and SLUM) notes </p>
+      <ul>
+      <li> <a href="http://www.archer.ac.uk/training/course-material/online/index.php" target="_blank">HPC Introductory Notes From Archer (But mostly applicable to all!)</a> </li>
+      <li> <a href="http://www.archer.ac.uk/training/" target="_blank">Acher Training Courses (Available to all!)</a></li>
+      <li> Example Slurm Job Scripts <a href="https://github.com/hlburns/ITintro/blob/master/example_SLURMMPI" target="_blank">Large MPI</a> or <a href="https://github.com/hlburns/ITintro/blob/master/examp
+le_SLURMSMALL" target="_blank">Small Jobs</a>. <a href="https://github.com/hlburns/ITintro/blob/master/useful_slurm" target="_blank">(Useful slurm commands)</a></li>
+      <li> Example PBS Job Scripts <a href="https://github.com/hlburns/ITintro/blob/master/example_PBSMPI" target="_blank">Large MPI</a> </li>
+      </ul>
+      <h3></h3>
+     </section>
 
-<h3>
-<a name="main-features-of-the-repo" class="anchor" href="#main-features-of-the-repo"><span class="octicon octicon-link"></span></a>Main features of the repo:</h3>
+    <section id="git">
+      <h3></h3>
+      <h3><a name="Git" class="anchor" href="git"><span class="octicon octicon-link"></span></a>Version control with Git:</h3>
 
-<hr><ul>
-<li>New to the unix systems? Take a look at <a href="https://github.com/hlburns/ITintro/wiki/.example_.cshrc"target="_blank">example_.cshrc</a> and <a href="https://github.com/hlburns/ITintro/wiki/example_.login"target="_blank">example_.login</a> .</li>
-<li>Fed up of csh? Take a look at <a href="https://github.com/hlburns/ITintro/blob/master/bash"target="_blank">bash</a> and  <a href="https://github.com/hlburns/ITintro/blob/master/example_.bashrc"target="_blank">example_.bashrc</a>
-</li>
-<li>Kick that MATLAB habit? This is how to set up <a href="https://github.com/hlburns/ITintro/blob/master/Anaconda"target="_blank">Anaconda</a>
-and <a href="https://github.com/hlburns/ITintro/wiki/Ipython-Notebooks"target="_blank">Ipython notebooks</a>
-</li>
-<li>How am I putting this all up here? Git! Set it up for yourself <a href="https://github.com/hlburns/ITintro/wiki/Git"target="_blank">here</a>
-</li>
-<li> Useful topics from NCAS software carpentry, on everything from UNIX to parallel programming and much more! <a href="http://www.ceda.ac.uk/ncas-reading-2015/"target="_blank">Found here</a>
-</li>
-<li>  Easy manipulation of netcdf <a href="https://github.com/hlburns/ITintro/wiki/NCO"target="_blank">NCO notes</a>
-</li>
-</ul><hr><h3>
+    <li>How am I putting this all up here? Git! Set it up for
+yourself <a href="https://github.com/hlburns/ITintro/wiki/Git" target="_blank">here</a>
+    </li>
+    </section>
 
-<h3>
-<a name="Ipython-and-notebooks" class="anchor" href="#Ipython-and-notebooks"><span class="octicon octicon-link"></span></a>Useful IPython Notebooks:</h3>
+     <section id="web">
+      <h3></h3>
+      <h3><a name="Web" class="anchor" href="web"><span class="octicon octicon-link"></span></a>HTML and Markdown:</h3>
+      This site is slowly teaching me some HTML coding and how to do simple web design. I'm slowly updloading useful tips  <a href="https://github.com/hlburns/ITintro/wiki/Web-design" target="_blank">here<
+/a>.
+      <p>All the Wiki pages are written in Markdown which is really really easy to do and both HTML and Markdown can be used in Ipython Notebooks .
+    </section>
 
-<hr><ul>
-<li>  A great presentation on <a href="https://github.com/ResearchComputing/Final_Tutorials/blob/master/Python_Matlab_Users/python_matlab_users.pdf"target="_blank">switching from MATLAB to Python</a>. By
-Shelley Knuth  
-</li>
-<li>  A great course on <a href="https://github.com/rabernat/python_teaching"target="_blank">python in Ocean Sciences </a>. By Ryan Abernathey.
-</li>
-<li> Here is a collection of useful notebooks <a href="http://nbviewer.ipython.org/github/hlburns/Notebooks/blob/master/Example_notebooks/"target="_blank">Examples</a> 
-</li>
-<li> Generating data for MITgcm <a href="http://nbviewer.ipython.org/github/hlburns/Notebooks/blob/master/Gendata_notebooks/Gendata_Nchannel.ipynb"target="_blank">Gendata.ipynb</a> 
-</li>
-<li> Fantastic introductory fludid dynamic and python notes from Lorena Barba  <a href="http://nbviewer.ipython.org/github/barbagroup/CFDPython/tree/master/lessons/"target="_blank">CFD notebook viewer</a> 
-</li>
-<li>  <a href="https://github.com/hlburns/ITintro/wiki/Ipython-Advanced"target="_blank">A few extra tips once you start using the notebooks</a> 
-</li>
-</ul><hr><h3>
 
-<h3>
-<a name="Useful-python-scritps" class="anchor" href="#Useful-python-scripts"><span class="octicon octicon-link"></span></a>Useful Python Scripts:</h3>
+    
+    <hr>
+    <h3><a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+    <p> Special Thanks to Jeff Blundell and Maike Sonnewald to their useful contributions. I hope as you come across things you add them to this repository to share info across the research group. For more
+ info please check out <a href="https://github.com/hlburns" class="user-mention">@hlburns</a> github page.</p>
 
-<hr><ul>
-<li> Read file replace a line <a href="https://github.com/hlburns/Scripts/blob/master/auto_change"target="_blank">auto_change.py</a> 
-</li>
-</ul><hr><h3>
-
-<h3>
-<a name="Useful-bash-scritps" class="anchor" href="#Useful-bash-scripts"><span class="octicon octicon-link"></span></a>Useful Bash Scripts:</h3>
-
-<hr><ul>
-<li> Writing data namelist files <a href="https://github.com/hlburns/Scripts/blob/master/autodata.sh"target="_blank">autodata.sh</a> 
-</li>
-</ul><hr><h3>
-
-<h3>
-<a name="Useful-mscripts" class="anchor" href="#Useful-mscripts"><span class="octicon octicon-link"></span></a>Useful Matlab Scripts:</h3>
-
-<hr><ul>
-<li> Blue to Red colour map <a href="https://github.com/hlburns/ITintro/blob/master/useful_scripts/b2r.m"target="_blank">b2r.m</a> 
-</li>
-<li> Custom colour map that work similar way to matlabs own maps <a href="https://github.com/hlburns/ITintro/blob/master/useful_scripts/redblue2.m"target="_blank">redblue2.m</a> 
-</li>
-<li> A function to calculate the overturning stream function <a href="https://github.com/hlburns/ITintro/blob/master/useful_scripts/MOC.m"target="_blank">MOC.m</a> 
-</li>
-</ul><hr><h3>
-
-<h3>
-<a name="HPC" class="anchor" href="#HPC"><span class="octicon octicon-link"></span></a>High Performance Computing:</h3>
-
-<hr><ul>
-<li> <a href="http://www.archer.ac.uk/training/course-material/online/index.php"target="_blank">HPC Introductory Notes From Archer (But mostly applicable to all!)</a> </li>
-<li> <a href="http://www.archer.ac.uk/training/"target="_blank">Acher Training Courses (Available to all!)</a> </li>
-<li> Example Slurm Job Scripts <a href="https://github.com/hlburns/ITintro/blob/master/example_SLURMMPI"target="_blank">Large MPI</a> or <a href="https://github.com/hlburns/ITintro/blob/master/example_SLURMSMALL"target="_blank">Small Jobs</a>.  <a href="https://github.com/hlburns/ITintro/blob/master/useful_slurm"target="_blank">(Useful slurm commands)</a></li> 
-<li> Example PBS Job Scripts <a href="https://github.com/hlburns/ITintro/blob/master/example_PBSMPI"target="_blank">Large MPI</a> </li>
-</ul><hr><h3>
-
-<h3>
-<a name="useful-links" class="anchor" href="#useful-links"><span class="octicon octicon-link"></span></a>Useful Links:</h3>
-
-<hr><ul>
-<li> <a href="https://github.com/hlburns/ITintro/blob/master/top30.pdf"target="_blank">Top 30 Unix commands you should know!</a> </li>
-<li>  <a href="http://overapi.com/python/"target="_blank">Cheat sheet for most programming languages</a></li>
-<li> <a href="http://nbviewer.ipython.org/github/ipython/ipython/tree/2.x/examples/"target="_blank">Ipython how tos notebooks</a></li>
-<li> <a href="http://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf"target="_blank">List of emacs commands</a></li>
-<li> <a href="http://www.albany.edu/faculty/hy973732/ist535/vi_editor_commands.pdf"target="_blank">List of VI commands</a></li>
-<li> <a href="http://www.codecademy.com/"target="_blank">Codecademy interactive tutorials</a></li>
-</ul><hr><h3>
-
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>I hope as you come across things you add them to this repository to share info across the research group. For more info please check out <a href="https://github.com/hlburns" class="user-mention">@hlburns</a> github page.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </section>
-
-        <footer>
-          Useful IT notes for Physical Oceanographers is maintained by <a href="https://github.com/hlburns">hlburns</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
     </div>
+    </div>
+ <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
+
