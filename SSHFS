@@ -27,12 +27,14 @@ ___Application___
 #Create a folder in your home directory
 mkdir NOC
 #Add the following to your .bashrc
-alias mountnoc='sshfs -o username@tethys.noc.soton.ac.uk:/ NOC' 
+alias mountnoc='sshfs $USER@ssh.noc.soton.ac.uk:/ NOC' 
+**$USER** is your nocs username
 # You can set whatever machine you like, and you can set it to your home directory 
 # here it's just set the the top directory and I've set a load of aliases such as
 # home and scratch to navigate through quickly.
-# The -o sets ssfs to follow symbolic links - if you set to the top directory then 
+# -o sets ssfs to follow symbolic links - if you set to the top directory then 
 # you don't really need this option!
+** Recomendation mount top directory and set symbolic link to home dir**
 # Any trouble with it you can unmount it:
 sudo umount NOC
 # Still miss behaving simply:
