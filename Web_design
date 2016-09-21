@@ -1,0 +1,58 @@
+# Learning to Web design #
+
+[Open source web design software](http://kompozer.sourceforge.net/)
+[Open source .css files](http://www.smashingmagazine.com/2008/12/100-free-high-quality-xhtmlcss-templates/)
+
+## Basic html commands ##
+
+Start Template:
+
+````html 
+<!DOCTYPE html>
+<html>
+
+  <!-- Header added by git hub page generator -->
+  <head>
+    <!-- Formating: -->
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Tidy up page headings etc -->
+    <title> hlburns repository </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="My IT notes">
+    <link rel="canonical" href="http://hlburns.github.io/ITintro/>
+  </head>
+  
+  <body>
+  <header>
+          <h1>Main title</h1>
+          <h3>
+               <section id="Sections" class="clearfix">
+               </section>
+        </header
+  </body>
+</html>
+````
+
+Bulett Points
+
+````html
+<li> Point 1 </li>
+
+````
+
+Links
+
+````html
+
+ <a href="link address"target="_blank"text</a>
+
+````
+
