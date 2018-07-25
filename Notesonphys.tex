@@ -1,0 +1,214 @@
+\addbibresource{../SOMOC2} 
+\section{Notes on physics}
+\subsection{Overview}
+
+
+\textbf{Impact of changing far-field forcing (Northern BC) when SO-forcing remains unchanged}
+\begin{description}
+\item \textbf{Narrow Channel:} 4000km x 2000km x 4000m (5km res, 24 layers) 
+\item Using MITgcm follow \citet{hogg2010} set up. Changing domain and resolution.
+\item Use Hoggs forcing and topography.
+\item Each run must be span up for 250 years
+\end{description}
+The idea is to do 8 model runs changing Andy's diffusion profile at the Northern Boundary to investigate the effects that has on $\psi_{res}$.
+
+If the northern boundary is closed, the overturning drops to 0. \citet{MR03} has the residual overturning scaling with buoyancy forcing \textbf{BUT} the buoyancy forcing is modified by eddy heat flux divergence. I.e. the eddy heat flux divergence should cancel the buoyancy forcing in a closed channel.
+
+NB: MITgcm has some adiabatic terms in the interior (vertical mixing) which would give not quite zero overturning.
+
+\textbf{Hypothesis:} The far-field forcing (Northern boundary condition) impacts the local solution by modifying the eddy-heat flux convergence in the surface layer, and as a result, the effective buoyancy forcing of the residual overturning.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The residual overturning stream function}
+The residual stream function $\psi_{res}$ is defined as:
+\begin{equation}
+\psi_{res}=\underbrace{\overline{\psi}}_\text{Eulerian mean} + \underbrace{\psi*}_\text{Bolus (Eddy}
+\label{EQ:psires}
+\end{equation}
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{../../Figures/meanMOC.eps}
+\caption{Mean overturning arising from Zonal wind stress}
+\label{fig:mean}
+\end{figure}
+This overturning is balanced by baroclinic instabilty acting to flatten the density surfaces in an opposing eddy circulation (see \fref{fig:eddy}).
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{../../Figures/eddyMOC.eps}
+\caption{Opposing eddy overturning with isopycnals illustrated to show eddy flatteing of density surfaces}
+\label{fig:eddy}
+\end{figure}
+\subsubsection{Overturning stream function in cartesian co-ordinates.}
+$\psi$ is a vertical indefinite integration of the meridional velocity (v), followed by a zonal integration over an entire basin.
+Function \gls{psi} at given latitude for every time step using equation.
+\begin{equation}
+\psi(y, z)=\iint V\, \mathrm{d}x\, \mathrm{d}z
+\end{equation} 
+Overturning stream function is taken as the maximum value found between $500m$ and $2000m$ (to avoid peaks arising from transport from ekman and bottom flow transport).  
+\subsubsection{Overturning stream function in density-space co-ordinates.}
+The Southern Ocean is strongly baroclinic (isobars \& isopycnals depart) so the overturning stream function in density space is calculated: 
+\begin{equation}
+\psi_{res}(y, \sigma^n)= \frac{1}{T} \int_{t_o}^{t_{o}+T} \int_{x_{w}}^{x_e}  \int_{\sigma^n(z)=\sigma^n}^{z=o} v \,\mathrm{d}z' \,\mathrm{d}x\,\mathrm{d}t
+\label{EQ:psidense} 
+\end{equation} 
+The zonal integration is performed along isopycnals. Allowing the residual overturning to be found.
+In Eq.\ref{EQ:psidense} the depth of a given neutral density value is found and $\psi_{res}$ is found by integrating from this depth to the surface.
+
+NB: $\psi(y,\sigma^n)$ is undefined for density values that are lighter than the density surface that outcrops
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Eddy Heat Fluxes}
+In the Southern Ocean eddy heat fluxes are considered to be of first order importance \citep{wunsch1999}
+\begin{equation}
+H=C_{p}\rho_0h_{ml}\int\limits_{Z}^{0}\int\limits_0^L V'T' \, \mathrm{d}x\, \mathrm{d}z
+\label{EQ:Heat} 
+\end {equation}  
+From the appendix of \citet{griesel2009} the eddy heat flux can then decomposed in a helmholtz decomposition:
+\begin{equation}
+\overline{v'T'}=\overline{v'T'}_{div}+\overline{v'T'}_{rot}
+\label{EQ:helm1}
+\end{equation}
+Where the divergent heat flux is the gradient of the scalar potential $\Phi$:
+\begin{equation}
+\overline{v'T'}_{div}= \nabla \Phi
+\label{EQ:helmdiv}
+\end{equation}
+And the rotational heat flux can be written with a stream function $\Theta$:
+\begin{equation}
+\overline{v'T'}_{rot}=k\,x\,\nabla \Theta
+\label{EQ:helmrot}
+\end{equation}
+To take the divergence of the total eddy heat flux you get:
+\begin{equation}
+\nabla^2\Phi=\nabla . \overline{v'T'}
+\label{EQ:helmdivdiv}
+\end{equation}
+and
+\begin{equation}
+\nabla^2\Theta=k\,x\,\nabla . \overline{v'T'}
+\label{EQ:helmdivrot}
+\end{equation}
+Which are solved by applying Lapacian inverter and using appropriate BCs.
+NB Divergence Theorem:
+\begin{equation}
+\iint \nabla . \overline{v'T'} \mathrm{d}A = \oint \overline{v'T'}_{div} . \mathrm{d}x
+\label{EQ:divtheorem}
+\end{equation}
+The rotational part is eliminated in the integral around a closed contour.\\
+\textbf{NB:} As I'm using a linear EOS the only way for eddies to alter their vertical heat budget is through change in the potential energy that maintains the eddy activity.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Heat and Density Budgets}
+The time mean heat budget is separated into the sum of the heat content tendency ($\mathcal{T}$), advective heat fluxes due to the mean flow ($\mathcal{M}$) and eddies ($\mathcal{E}$), and heat fluxes arising from parameterized sub-gird scale processes ($\mathcal{P}$) so that:
+\begin{equation}
+ \mathcal{T} + \mathcal{M} + \mathcal{E} + \mathcal{P} = \, 0
+\label{}
+\end{equation}
+\citet{morrison2013} uses the heat budgets described in \citet{wolfe2008}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Equation of State}
+The equation of state is:
+\begin{equation}
+\rho = \rho_{0}(1+\beta S\,-\,\alpha T)
+\label{}
+\end{equation}
+When a linear equation of state is used the relationship simply becomes: 
+\begin{equation}
+\rho = \rho_{0}(1\,-\,\alpha T)
+\label{}
+\end{equation}
+Where T=t-$t_{ref}$ and S=S-$S_{ref}$
+
+\subsection{Approximations Used}
+
+\subsubsection{Boussinesque}
+
+Variations in density with depth are 2-3 \%  so $ \rho _0 (z)$ becomes just $ \rho _0$ allowing the bossineque equations:
+
+\begin{equation}
+\rho _0 \frac{Du}{Dt} = -2 \rho _0 \Omega \cross u - \nabla \tilde{p} - \tilde{p} \nabla \Phi + \mathcal{F}
+\label{eq:BQ1}
+\end{equation}
+\begin{equation}
+\nabla \cdot u = 0
+\label{eq:BQ2}
+\end{equation}
+\begin{equation}
+\rho _0 \frac{D (\theta, S)}{Dt} = ( \mathcal{G_S}, \mathcal{G_{\theta}})
+\label{eq:BQ3}
+\end{equation}
+\begin{equation}
+\tilde{\rho} = F ( S, \theta, \rho _0 ) + F(S_0, \theta _0, \rho _0 (z))
+\label{eq:BQ4}
+\end{equation}
+
+\fref{eq:BQ2} is the \textit{\gls{incompressibility} equation}. Note it is not showing \gls{incompressibility} if in a diabatic system (see glossary)!
+
+\subsubsection{Quasi-Geostrophic}
+
+Ro << 1, l << 1 , Ek << 1. As well as an assumed stratified background state with all effects of compressibility neglected. No mean advection and no vertical component of eddy PV flux.
+
+This allows us to write a geostrophic streamfunction:
+
+\begin{equation}
+u=-\frac{\partial \psi}{\partial y}, \quad v=\frac{\partial \psi}{\partial x}, \quad w=o
+\end{equation}
+
+and that the horizontal velocity divergence is 0.
+
+
+\begin{equation}
+\frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} =0
+\end{equation}
+
+\subsection{Instabilites}
+
+In principle, energy exchange between waves and mean flow can take place in both directions. The energy exchange related to the Reynolds stress ($u'v'$) takes both signs, whereas the term related to the horizontal eddy density flux ($v'\rho '$) is predominantly positive so that energy is transferred from the mean flow
+to the waves, which means that the mean flow is unstable to small perturbations. Two physically different mechanisms can be distinguished, corresponding to energy
+transfer, namely barotropic and baroclinic instability...
+
+\subsubsection{Barotropic Instability}
+
+Barotropic instability is associated with the transport term: $$ -\frac{\partial U}{\partial y} <u'v'> $$ and can only occur if there is a horizontal shear of the background velocity i.e. $$ -\frac{\partial U}{\partial y}  \neq 0 $$. Since no vertical shear of U is needed (in contrast to baroclinic instability a barotropic background current can produce the instability, which explains the name. An analysis of the energetics of the mean current shows that the energy is exchanged with the kinetic energy of the mean flow.
+
+Barotropic mode where both the mean flow as well as the disturbance are independent of z.
+
+One of the important consequences of barotropic instability is that flows with small length scales are likely to be unstable. In fact, it can be shown that interacting short Rossby waves are unstable (Gill, 1974), which also explains the turbulent nature of mesoscale motions in the ocean.
+
+\subsubsection{Baroclinic Instability}
+Baroclinic instability is related to the transport term:
+\begin{equation}
+\frac{fg}{N^2 (\partial U/ \partial z)<v'p'>}
+\end{equation}
+
+\subsection{Energetics}
+\subsubsection{EKE}
+\subsubsection{APE}
+Potential energy (per mass) (Q-G) is defined as:
+\begin{equation}
+E_p = \frac{1}{2}\frac{g^2 \rho ^2}{N^2} = mgh = \frac{b^2}{2N^2}
+\label{PE}
+\end{equation}
+Available potential energy (APE) is found by considering ispycnal displacements represented by density displacements. APE is the part of the total potential energy and the minimum potential energy one can obtain from an adiabatic rearrangement of the fluid particles \citep{Loren}.
+To put it simply if you flatten isopycnals even though increasing potential energy the stratification is more stable as that energy is not available to convert to kinetic energy. If you steepen isopycnals you increase the available potential energy as this is baroclinically unstable and the potential energy can be release to KE. APE can only arise from non zero horizontal gradients in density.
+
+When deciding on how to calculate APE \cite{Kang2010} did an indepth evaluation of 3 different methods.
+
+\begin{enumerate}
+\item Domain integrated APE:
+the difference between PE in perturbed state and reference state.
+\begin{equation}
+APE = (\rho -\rho _b)gz
+\end{equation}
+used to calculate depth or domain integrated APE
+\item Linear theory vertical displacement of fluid parcels
+\begin{equation}
+APE = \frac{g^2 (\rho -\rho _b)}{2 \rho _0 N^2}
+\end{equation}
+
+\end{enumerate}
+
+
+
+
+

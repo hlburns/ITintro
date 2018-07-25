@@ -1,0 +1,9 @@
+Notes on iridis4
+
+Access: shh -X -Y hb1g13@iridis4_b.soton.ac.uk
+
+/home = 100GB of storage
+
+Quota command:
+mmlsquota --block-size=G home scratch
+

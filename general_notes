@@ -1,0 +1,12 @@
+General_notes
+
+Nautilus
+3000kmx2000kmx4000m 6.66667km res with 24 layers
+5 years/day 
+
+Iridis 4 
+4000km x 2000km x 4000m 5km res with 24 layers
+
+Useful notes to be found in Hogg.setup
+NB keep clean copy of MITgcm in ~/PhD/MITgcm
+

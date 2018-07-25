@@ -1,0 +1,50 @@
+
+MSM Group Linux systems:                                                 specfp
+========================                                                  2006
+2 x Dual-core AMD Opteron Processor 2214 2.2GHz (total 4 cpu cores):
+  noetic    Sun  Ultra 40     SLED 11.2   8 GB  Open-plan                 11.5
+  notion    Sun  Ultra 40     SLED 11.2   8 GB  Open-plan                 11.5
+  [N.B. notion runs the Occam dataserver (and the NEMO
+   Wiki), so should be kept running whenever possible]
+2 x Dual-core AMD Opteron Processor 2222 3.0GHz (total 4 cpu cores):
+  nomad     Sun  Ultra 40 M2  SLED 11.2   8 GB  Open-plan                 15.0
+  nonsuch   Sun  Ultra 40 M2  SLED 11.2   8 GB  Open-plan (Jeff)          15.0
+  nobble    Sun  Ultra 40 M2  SLED 11.2   8 GB  Open-plan                 15.0
+  nozzle    Sun  Ultra 40 M2  SLED 11.2   8 GB  Open-plan                 15.0
+  noumenon  Sun  Ultra 40 M2  SLED 11.2   8 GB  Katya's office            15.0
+  nozomi    Sun  Ultra 40 M2  SLED 10.4   8 GB  Open-plan (Mark P.)       15.0
+  monty     Sun  Ultra 40 M2  SLED 11.2   8 GB  Open-plan                 15.0
+  nostrum   Sun  Ultra 40 M2  SLED 11.2   8 GB  Open-plan (Josie)         15.0
+1 x Quad-core Intel Xeon W3540 "Bloomfield" processor 2.93 GHz (4 cores):
+  (8 MB cache; 45 nm; 130W; DDR3, max. memory b/w 25.6 GB/s; SSE4.2)
+  noema     Sun  Ultra 27     SLED 10.4  12 GB  Open-plan                 36.3
+  noctuid   Sun  Ultra 27     SLED 11.2  12 GB  Open-plan (Alex)          36.3
+  nocturne  Sun  Ultra 27     SLED 11.2  12 GB  Joel's office             36.3
+
+  2 x SLED 10.4, 11 x SLED 11.2
+
+2 x hex-core Intel Xeon E6540 "Beckton" processors 2.00 GHz (12 cores):   33.2
+  (18 MB L3 cache per processor; 45 nm; 105 W; DDR3 1066 MHz clock)
+  mnemosyne IBM  x3690 X5     SLES 11.1 192 GB  ITG machine room   GPFS 4 Gbit
+
+
+Non-MSM Linux systems for shared use:
+=====================================
+2 x hex-core Intel Xeon X5675 "Westmere-EP" processors 3.06 GHz (12 cores): 46.3
+  (12 MB L3 cache per processor; 32 nm; 95 W; DDR3 1333 MHz clock)  Intel12 61.8
+  tethys    IBM  x3650 M3     SLES 11.1  96 GB  ITG machine room   GPFS 8 Gbit
+  themis    IBM  x3650 M3     SLES 11.1  96 GB  ITG machine room   GPFS 8 Gbit
+
+2 x quad-core Intel Xeon E5-2643 "Sandy Bridge-EP" processors 3.30 GHz (8 cores): 83.9
+  (10 MB L3 cache per processor; 32 nm; 130 W; DDR3 1333? MHz clock)   (Intel12)
+  theia     IBM  x3650 M4     SLES 11.1 192 GB  ITG machine room
+
+Also typhoon and ogmios (coming soon)
+
+Notes:
+------
+All the linux workstations are now on 1 Gbit/sec data lines.
+
+ALSO ATLAS and OCEANUS (specs unknown - but quite good)
+ALSO IAPETUS (specs unknown not so good)
+
