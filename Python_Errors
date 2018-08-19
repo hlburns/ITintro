@@ -1,9 +1,0 @@
-~~~~~~~~~~~~~~~~~~~~~~~~~~~NOTES on common python error messages~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Warning messgae          |   Reason                         |       Fix
-~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-UnicodeWarning:          | symbol or non standard character |  add interpreter flag: 
-                         | in string.                       | r'$\latex$' or u' acentented letter' 
-~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     
-  
