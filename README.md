@@ -12,7 +12,7 @@ Please use the WIKI](https://github.com/hlburns/ITintro/wiki) for neat mark down
 
 ## Contributions ##
 
-Contibutions are welcome 
+Contibutions are welcome. Please refere to the [Contributing.md](https://github.com/hlburns/Information_Repository/blob/master/CONTRIBUTING.md) for up-to-date information on contributing.
 
 ## License ##
 
