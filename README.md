@@ -1,13 +1,17 @@
-ITintro
+# IT Notes #
+
 =======
-Here are a few text files to help people set up various stuff on the systems
-here.
-I've tried to make things idiot proof! 
 
-If you are completely new first read the example files
-.cshrc
-.login 
-these provide a quick set up on the systems to get you going
+## Overview ##
 
-The rest of the stuff is for Python, Bash and version control
+Previously I hosted a wiki and repository for Scientific Computing on the NOC UNIX systems.
+
+## Usage ##
+
+## Contributions ##
+
+## Liscence ##
+
+
+
 
